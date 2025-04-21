@@ -157,11 +157,26 @@ public class ArrayMethods
         System.out.println("}");
     }
     
-    // public void sortArray(int[] inArray){
-        // int[] outer = new int[inArray.length];
-        // int tem = inArray[0];
-        // for(int i = 0; i <= inArray.length-1; i++){
-            // for(int j = i+1; j <= 
-        // }
-    // }
+    public void sortArray(int[] inArray){
+        int[] outer = new int[inArray.length];
+        int tem;
+        
+        for(int i = 0; i < inArray.length - 1; i++){
+            for(int j = i+1; j <= inArray.length - 1;j++){
+                if(inArray[i] > inArray[j]){
+                    tem = inArray[j];
+                    inArray[j] = inArray[i];
+                    inArray[i] = tem;
+                }
+            }
+        }
+    }
+    
+    public int[] reverseArray(int[] inArray){
+        int[] reversedArray = new int[inArray.length];
+        for(int i = 0; i< inArray.length; i++){
+            reversedArray[i] = inArray[inArray.length - 1 - i];
+        }
+        return reversedArray;
+    }
 }
