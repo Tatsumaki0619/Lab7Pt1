@@ -5,7 +5,7 @@ import java.util.Arrays;
  *
  * @author Qianyi Li
  * @version v1.0
- * @since 4/17/2025
+ * @since 4/22/2025
  */
 public class ArrayMethods
 {
@@ -157,6 +157,10 @@ public class ArrayMethods
         System.out.println("}");
     }
     
+    /**
+     * This method will sort the array using the increasing order.
+     * @param inArray This is the array that will be sorted provided by the user.
+     */
     public void sortArray(int[] inArray){
         int[] outer = new int[inArray.length];
         int tem;
@@ -172,6 +176,12 @@ public class ArrayMethods
         }
     }
     
+    /**
+     * This method will reverse the array(ie: switch the last and the
+     * first element) provided by the user.
+     * @param inArray The array needs to be reversed.
+     * @return the reversed the array.
+     */
     public int[] reverseArray(int[] inArray){
         int[] reversedArray = new int[inArray.length];
         for(int i = 0; i< inArray.length; i++){
